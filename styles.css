@@ -11,7 +11,7 @@ body{
     padding-top: 10%;
 }
 .todolist{
-    width: 400px;
+    width: 500px;
     padding: 20px;
     background-color: #222;
     display: flex;
@@ -28,7 +28,7 @@ ul,ol,li{
     list-style: none;
 }
 .todolist-input{
-    width: 200px;
+    width: 300px;
     padding: 5px;
     border: 2px solid #fff; 
     background-color: inherit;
@@ -75,4 +75,41 @@ li{
 .todo-btn:hover{
     background-color: #fff;
     color: #222;
+}
+.shifrlash {
+    cursor: pointer;
+    padding: 6px;
+    background-color: inherit;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.deshifrlash {
+    cursor: pointer;
+    padding: 6px;
+    background-color: inherit;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.shifrlash:hover{
+    background-color: #fff;
+    color: #222;
+}
+.deshifrlash:hover{
+    background-color: #fff;
+    color: #222;
+}
+
+.battery{
+    cursor: pointer;
+    padding: 6px;
+    background-color: inherit;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+    text-align: center;
 }
