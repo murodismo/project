@@ -79,6 +79,7 @@ elList.addEventListener("click", function (evt) {
     todos.splice(foundedTodo, 1)
     elList.innerHTML = null
     renderTodos(todos, elList)
+    tebranish();
     console.log(todos);
   }else if (evt.target.matches(".todo-input")) {
     const foundedDataset = evt.target.dataset.editTodoInputDataset * 1
@@ -125,3 +126,34 @@ window.navigator.getBattery().then((battery) => {
 })
 
 ///////// Ended BOM
+
+
+/////////  Prosta qoshimcha
+
+
+function tebranish() {
+  const intensity = 50;
+  let count = 0;
+  const interval = setInterval(() => {
+    const offsetX = (Math.random() * intensity * 2) - intensity;
+    const offsetY = (Math.random() * intensity * 2) - intensity;
+    document.body.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+    count++;
+    if (count > 15) {
+      clearInterval(interval);
+      document.body.style.transform = '';
+    }
+  }, 50);
+}
+
+
+///////emoji  
+
+const emojis = ['😀', '😂', '😍', '😎', '😴', '🤩', '🤔', '🥳', '😡', '🤯'];
+const button = document.getElementById('emojiButton');
+const emojiDiv = document.getElementById('emoji');
+
+button.addEventListener('click', () => {
+  const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+  emojiDiv.textContent = randomEmoji;
+});
