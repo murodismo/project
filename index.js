@@ -109,6 +109,13 @@ elList.addEventListener("click", function (evt) {
   
 })
 
+
+
+////////// ended DOM
+
+
+///////// started BOM 
+
 const elP = document.querySelector(".battery")
 
 window.navigator.getBattery().then((battery) => {
@@ -117,8 +124,4 @@ window.navigator.getBattery().then((battery) => {
     battery.level > 0.75? "green" : battery.level > 0.5? "yellow" : "red"
 })
 
-////////// ended DOM
-
-
-
-
+///////// Ended BOM
